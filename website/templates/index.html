@@ -1,0 +1,284 @@
+{% extends "base.html" %} {% block body %}
+<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light py-md-3">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Vaylon Fernandes</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#mainNav"
+      aria-controls="mainNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto d-flex justify-content-end">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="#skills">Skills</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="#work">My Work</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="#blog">Blog</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link active" href="#contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main class="container" id="main">
+  <section
+    class="d-flex justify-content-center align-items-center flex-column"
+    id="home"
+  >
+    <p class="display-3 monospace font-monospace">
+      Hi There!👋 <br />
+      I'm Vaylon
+    </p>
+    <a class="btn btn-outline-dark me-5" href="#about"> About Me </a>
+  </section>
+
+  <section id="about" class="container-fluid">
+    <div class="container-fluid">
+      <h1 id="about-header" class="text-center">About Me</h1>
+      <div class="container d-flex flex-md-row flex-column">
+        <div
+          class="
+            image-container
+            img-fluid
+            d-md-flex d-none
+            justify-content-center
+          "
+        >
+          <img src={{url_for("static",
+          filename="/images/vaylon-fernandes.png")}} class="rounded-circle
+          shadow w-100 h-100" alt="" />
+        </div>
+
+        <div
+          class="
+            image-container
+            w-100
+            h-75
+            d-md-none d-flex
+            justify-content-center
+            align-items-center
+          "
+        >
+          <img src={{url_for("static",
+          filename="/images/vaylon-fernandes.png")}} class="rounded-circle w-50
+          h-100" alt="" />
+        </div>
+
+        <div
+          class="
+            d-flex
+            align-items-center
+            justify-content-center
+            ps-4
+            flex-column
+          "
+        >
+          <p id="about-text" class="text-center fs-4">
+            I am a Electonics and Telecomunication engineering graduate pursuing
+            my passion and for programming 👨‍💻. Right now I am exploring the
+            world of web development 💻. Currently I am working on
+            <a
+              href="https://flask.palletsprojects.com/en/2.0.x/"
+              class="fw-bold"
+              >Flask
+            </a>
+            based projects.
+          </p>
+
+          <a href="#" target="_blank" class="btn btn-sm btn-outline-dark"
+            >My Resume</a
+          >
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="container-fluid text-center mb-5">
+      <h1 class="skills-header">Skills</h1>
+      <!-- python logo -->
+      <img class="skill-image" src={{url_for("static",
+      filename="images/python-Icon.svg")}} alt="Python Logo">
+      <!--html5 logo-->
+      <img class="skill-image" src={{url_for("static",
+      filename="images/html5-Icon.svg")}} alt="HTML5 Logo">
+      <!-- Css3 logo -->
+      <img class="skill-image" src={{url_for("static",
+      filename="images/css3-Icon.svg")}} alt="CSS3 Logo">
+      <!-- Javascript Logo -->
+      <img class="skill-image" src={{url_for("static",
+      filename="images/javascript-Icon.svg")}} alt="Javascript Logo">
+    </div>
+    <div class="tools container-fluid text-center mt-5">
+      <h1 class="tools-header">Tools</h1>
+      <!-- git logo  -->
+      <img class="skill-image" src={{url_for("static",
+      filename="images/git-Icon.svg")}} alt="Git Logo">
+      <!-- github logo -->
+      <img class="skill-image" src={{url_for("static",
+      filename="images/github-Icon.svg")}} alt="github Logo">
+      <!-- vscode logo  -->
+      <img class="skill-image" src={{url_for("static",
+      filename="images/vscode-Icon.svg")}} alt="vscode Logo">
+    </div>
+  </section>
+  <section id="work" class="mb-5">
+    <div class="container-fluid text-center">
+      <h1>My Work</h1>
+      <p id="work-text">Here's some of my work</p>
+    </div>
+    <div class="row">
+      <div class="col-md">
+        <div class="card shadow">
+          <img
+            src="https://via.placeholder.com/50"
+            class="card-img-top"
+            alt=""
+          />
+          <div class="card-body">
+            <h5 class="card-title">Flask Weather App</h5>
+            <p class="card-text">
+              A simple weather app built using Flask and Bootstrap
+            </p>
+            <a href="#" class="btn btn-sm btn-outline-dark rounded-pill"
+              ><i class="fas fa-globe"></i> View Site</a
+            >
+            <a
+              href="#"
+              class="btn btn-sm btn-outline-dark rounded-pill source-btn"
+              ><i class="fab fa-github"></i>View Source</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="col-md">
+        <div class="card shadow">
+          <img
+            src="https://via.placeholder.com/50"
+            class="card-img-top"
+            alt=""
+          />
+          <div class="card-body">
+            <h5 class="card-title">Flask Weather App</h5>
+            <p class="card-text">
+              A simple weather app built using Flask and Bootstrap
+            </p>
+            <a href="#" class="btn btn-sm btn-outline-dark rounded-pill"
+              ><i class="fas fa-globe"></i> View Site</a
+            >
+            <a
+              href="#"
+              class="btn btn-sm btn-outline-dark rounded-pill source-btn"
+              ><i class="fab fa-github"></i>View Source</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="col-md">
+        <div class="card shadow">
+          <img
+            src="https://via.placeholder.com/50"
+            class="card-img-top"
+            alt=""
+          />
+          <div class="card-body">
+            <h5 class="card-title">Flask Weather App</h5>
+            <p class="card-text">
+              A simple weather app built using Flask and Bootstrap
+            </p>
+            <a href="#" class="btn btn-sm btn-outline-dark rounded-pill"
+              ><i class="fas fa-globe"></i> View Site</a
+            >
+            <a
+              href="#"
+              class="btn btn-sm btn-outline-dark rounded-pill source-btn"
+              ><i class="fab fa-github"></i>View Source</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <a
+      href="https://github.com/vaylon-fernandes"
+      class="
+        text-decoration-none
+        d-flex
+        justify-content-center
+        mt-3
+        fab
+        fa-github
+        fs-5
+      "
+      >Visit my Github profile to see more
+    </a>
+  </section>
+  <section id="blog">
+    <div class="container-fluid text-center">
+      <h1>Blog</h1>
+      <p class="fs-2">
+        Coming Soon😁! <br />
+        Stay Tuned!
+      </p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container-fluid text-center">
+      <h1>Contact Me📞</h1>
+      <p class="fs-5">
+        Looking to hire? Want to discuss a project or just chat? My inbox is
+        open for all.
+      </p>
+      <a
+        href="mailto:vaylonfernandes@protonmail.com"
+        class="text-decoration-none fs-4"
+        >vaylonfernandes@protonmail.com</a
+      >
+      <div class="socials">
+        <span class="fa-stack fa-2x">
+          <i class="fas fa-circle fa-stack-2x"> </i>
+          <a
+            href="mailto:vaylonfernandes@protonmail.com"
+            class="fas fa-envelope fa-stack-1x fa-inverse"
+          ></a>
+        </span>
+
+        <a href="" class="fab fa-linkedin"></a>
+        <a
+          href="https://github.com/vaylon-fernandes/"
+          class="fab fa-github"
+        ></a>
+        <a
+          href="https://stackoverflow.com/users/15018032/vaylon-fernandes"
+          class="fab fa-stack-overflow"
+        ></a>
+        <a
+          href="https://www.instagram.com/vf_09_/"
+          class="fab fa-instagram-square"
+        ></a>
+        <a href="https://twitter.com/Vaylon3" class="fab fa-twitter"></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+{% endblock body %}

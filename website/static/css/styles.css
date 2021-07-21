@@ -28,6 +28,46 @@ html {
   margin: top -5.625rem;
 }
 
+.wave {
+  animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
+  animation-duration: 2.5s; /* Change to speed up or slow down */
+  animation-iteration-count: infinite; /* Never stop waving :) */
+  transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
+  display: inline-block;
+}
+
+.wave img {
+  width: 1em;
+  height: 1em;
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  } /* The following five values can be played with to make the waving more or less extreme */
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  } /* Reset for the last half to pause */
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
 .skill-image {
   width: 13%;
   margin-right: 2rem;
@@ -58,14 +98,63 @@ html {
   height: 16em;
 }
 
-.socials a {
-  text-decoration: none;
-  /* font-size: 1.5rem; */
+.socials {
+  margin-top: 0.7em;
 }
 
-/* .socials .fa-envelope {
+.socials a {
+  text-decoration: none;
+}
+
+.mail i {
+  background-color: #5d7cf7;
+}
+
+.linkedin i {
+  background-color: #0a66c2;
+}
+
+.github i {
   background-color: #333;
-} */
+}
+
+.stack-overflow i {
+  background-color: #f48024;
+}
+.instagram i {
+  background-color: #c13584;
+}
+.twitter i {
+  background-color: #1da1f2;
+}
+
+.icon-button i {
+  color: #fff;
+  border-radius: 2.6rem;
+  cursor: pointer;
+  /* display: inline-block; */
+  font-size: 1.3rem;
+  height: 2.6rem;
+  line-height: 2.6rem;
+  position: relative;
+  text-align: center;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 2.6rem;
+  margin: 0 5px 10px;
+  transition: 0.2s ease-in;
+}
+
+.facebook i:hover,
+.github i:hover,
+.instagram i:hover,
+.linkedin i:hover,
+.mail i:hover,
+.stack-overflow i:hover,
+.twitter i:hover {
+  background-color: #000;
+}
 
 /* Media queries  */
 @media (min-width: 768px) and (max-width: 991.98px) {

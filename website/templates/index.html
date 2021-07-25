@@ -1,5 +1,8 @@
 {% extends "base.html" %} {% block body %}
-<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light py-md-3">
+<nav
+  class="navbar fixed-top navbar-expand-lg navbar-light py-md-3"
+  id="navWrapper"
+>
   <div class="container-fluid">
     <a class="navbar-brand" href="/">Vaylon Fernandes</a>
     <button
@@ -39,24 +42,27 @@
   </div>
 </nav>
 
-<main class="container" id="main">
-  <section
-    class="d-flex justify-content-center align-items-center flex-column"
-    id="home"
-  >
-    <p class="display-3 monospace font-monospace">
-      Hi There!
-      <span class="wave"
-        ><img
-          src="https://twemoji.maxcdn.com/v/latest/72x72/1f44b.png"
-          alt="Animated waving hand"
-        />
-      </span>
-      <br />
-      I'm Vaylon
-    </p>
-    <a class="btn btn-outline-dark me-5" href="#about"> About Me </a>
-  </section>
+<main class="container-fluid" id="main">
+  <div class="wrapper">
+    <section
+      class="d-flex justify-content-center align-items-center flex-column"
+      id="home"
+    >
+      <p class="display-3 monospace font-monospace">
+        Hi There!
+        <span class="wave"
+          ><img
+            src="https://twemoji.maxcdn.com/v/latest/72x72/1f44b.png"
+            alt="Animated waving hand"
+            draggable="false"
+          />
+        </span>
+        <br />
+        I'm Vaylon
+      </p>
+      <a class="btn btn-outline-dark me-5" href="#about"> About Me </a>
+    </section>
+  </div>
 
   <section id="about" class="container-fluid">
     <div class="container-fluid">
@@ -72,7 +78,7 @@
         >
           <img src={{url_for("static",
           filename="/images/vaylon-fernandes.png")}} class="rounded-circle
-          shadow w-100 h-100" alt="" />
+          shadow w-100 h-100" alt="Vaylon Fernandes" draggable="false" />
         </div>
 
         <div
@@ -87,7 +93,7 @@
         >
           <img src={{url_for("static",
           filename="/images/vaylon-fernandes.png")}} class="rounded-circle w-50
-          h-100" alt="" />
+          h-100" alt="Vaylon Fernandes" />
         </div>
 
         <div
@@ -106,6 +112,7 @@
             <a
               href="https://flask.palletsprojects.com/en/2.0.x/"
               class="fw-bold"
+              target="_blank"
               >Flask
             </a>
             based projects.
@@ -124,28 +131,29 @@
       <h1 class="skills-header">Skills</h1>
       <!-- python logo -->
       <img class="skill-image" src={{url_for("static",
-      filename="images/python-Icon.svg")}} alt="Python Logo">
+      filename="images/python-Icon.svg")}} draggable="false" alt="Python Logo">
       <!--html5 logo-->
       <img class="skill-image" src={{url_for("static",
-      filename="images/html5-Icon.svg")}} alt="HTML5 Logo">
+      filename="images/html5-Icon.svg")}} draggable="false" alt="HTML5 Logo">
       <!-- Css3 logo -->
       <img class="skill-image" src={{url_for("static",
-      filename="images/css3-Icon.svg")}} alt="CSS3 Logo">
+      filename="images/css3-Icon.svg")}} draggable="false" alt="CSS3 Logo">
       <!-- Javascript Logo -->
       <img class="skill-image" src={{url_for("static",
-      filename="images/javascript-Icon.svg")}} alt="Javascript Logo">
+      filename="images/javascript-Icon.svg")}} draggable="false" alt="Javascript
+      Logo">
     </div>
     <div class="tools container-fluid text-center mt-5">
       <h1 class="tools-header">Tools</h1>
       <!-- git logo  -->
       <img class="skill-image" src={{url_for("static",
-      filename="images/git-Icon.svg")}} alt="Git Logo">
+      filename="images/git-Icon.svg")}} draggable="false" alt="Git Logo">
       <!-- github logo -->
       <img class="skill-image" src={{url_for("static",
-      filename="images/github-Icon.svg")}} alt="github Logo">
+      filename="images/github-Icon.svg")}} draggable="false" alt="github Logo">
       <!-- vscode logo  -->
       <img class="skill-image" src={{url_for("static",
-      filename="images/vscode-Icon.svg")}} alt="vscode Logo">
+      filename="images/vscode-Icon.svg")}} draggable="false" alt="vscode Logo">
     </div>
   </section>
   <section id="work">
@@ -155,69 +163,74 @@
     </div>
     <div class="row">
       <div class="col-md">
-        <div class="card shadow">
-          <img
-            src="https://via.placeholder.com/50"
-            class="card-img-top"
-            alt=""
-          />
+        <div class="card shadow h-100">
+          <img src={{url_for("static", filename="images/weather_app.png")}}
+          class="card-img-top" alt="Flask weather app" draggable="false" />
           <div class="card-body">
             <h5 class="card-title">Flask Weather App</h5>
-            <p class="card-text">
+            <p class="card-text pb-5">
               A simple weather app built using Flask and Bootstrap
             </p>
-            <a href="#" class="btn btn-sm btn-outline-dark rounded-pill"
+            <a
+              href="https://weatherappfh.herokuapp.com/"
+              class="btn btn-sm btn-outline-dark rounded-pill"
+              target="_blank"
               ><i class="fas fa-globe"></i> View Site</a
             >
             <a
-              href="#"
+              href="https://github.com/vaylon-fernandes/flask_weather_app"
               class="btn btn-sm btn-outline-dark rounded-pill source-btn"
+              target="_blank"
               ><i class="fab fa-github"></i>View Source</a
             >
           </div>
         </div>
       </div>
       <div class="col-md">
-        <div class="card shadow">
-          <img
-            src="https://via.placeholder.com/50"
-            class="card-img-top"
-            alt=""
-          />
+        <div class="card shadow h-100">
+          <img src={{url_for("static", filename="images/to_do_app.png")}}
+          class="card-img-top" alt="Flask To do list app" draggable="false" />
           <div class="card-body">
-            <h5 class="card-title">Flask Weather App</h5>
-            <p class="card-text">
-              A simple weather app built using Flask and Bootstrap
+            <h5 class class="card-title">Flask To Do List App</h5>
+            <p class="card-text pb-5">
+              A To Do List app built using Flask and Bootstrap
             </p>
-            <a href="#" class="btn btn-sm btn-outline-dark rounded-pill"
+            <a
+              href="https://flask-web-todo.herokuapp.com/"
+              class="btn btn-sm btn-outline-dark rounded-pill"
+              target="_blank"
               ><i class="fas fa-globe"></i> View Site</a
             >
             <a
-              href="#"
+              href="https://github.com/vaylon-fernandes/flask_to_do_list"
               class="btn btn-sm btn-outline-dark rounded-pill source-btn"
+              target="_blank"
               ><i class="fab fa-github"></i>View Source</a
             >
           </div>
         </div>
       </div>
       <div class="col-md">
-        <div class="card shadow">
-          <img
-            src="https://via.placeholder.com/50"
-            class="card-img-top"
-            alt=""
-          />
+        <div class="card shadow h-100">
+          <img src={{ url_for("static", filename="images/rand_wiki.png") }}
+          class="card-img-top" id="wiki-app" alt="Random wiki app"
+          draggable="false" />
           <div class="card-body">
-            <h5 class="card-title">Flask Weather App</h5>
+            <h5 class="card-title">Flask Random Wiki App</h5>
             <p class="card-text">
-              A simple weather app built using Flask and Bootstrap
+              A simple Flask app that displays the title and intro of a random
+              wikipedia article with a link to the full article.
             </p>
-            <a href="#" class="btn btn-sm btn-outline-dark rounded-pill"
+            <a
+              href="https://rand-wiki.herokuapp.com/"
+              class="btn btn-sm btn-outline-dark rounded-pill"
+              target="_blank"
               ><i class="fas fa-globe"></i> View Site</a
             >
             <a
-              href="#"
+              href="https://github.com/vaylon-fernandes/random_wiki/"
               class="btn btn-sm btn-outline-dark rounded-pill source-btn"
+              target="_blank"
               ><i class="fab fa-github"></i>View Source</a
             >
           </div>
@@ -250,14 +263,23 @@
 
   <section id="contact">
     <div class="container-fluid text-center">
-      <h1>Contact Me📞</h1>
+      <h1>
+        Contact Me
+        <img
+          src="https://twemoji.maxcdn.com/v/latest/72x72/260e.png"
+          alt="Telephone"
+          draggable="false"
+          id="telephone"
+        />
+      </h1>
       <p class="fs-4">
         Looking to hire? Want to discuss a project or just chat? My inbox is
         open for all.
       </p>
       <a
         href="mailto:vaylonfernandes@protonmail.com"
-        class="text-decoration-none fs-3"
+        class="text-decoration-none"
+        id="mail-to"
         >vaylonfernandes@protonmail.com</a
       >
       <div class="socials">
@@ -268,7 +290,7 @@
           rel="noopener"
           class="mail icon-button"
         >
-          <i class="fas fa-envelope"> </i>
+          <i draggable="false" class="fas fa-envelope"> </i>
         </a>
 
         <!-- linkedin  -->
@@ -278,7 +300,7 @@
           rel="noopener"
           class="linkedin icon-button"
         >
-          <i class="fab fa-linkedin"> </i>
+          <i draggable="false" class="fab fa-linkedin"> </i>
         </a>
 
         <!-- Github -->
@@ -288,7 +310,7 @@
           rel="noopener"
           class="github icon-button"
         >
-          <i class="fab fa-github"></i>
+          <i draggable="false" class="fab fa-github"></i>
         </a>
 
         <!-- stack-overflow  -->
@@ -298,7 +320,7 @@
           rel="noopener"
           class="stack-overflow icon-button"
         >
-          <i class="fab fa-stack-overflow"></i>
+          <i draggable="false" class="fab fa-stack-overflow"></i>
         </a>
         <!-- instagram  -->
         <a
@@ -307,7 +329,7 @@
           rel="noopener"
           class="instagram icon-button"
         >
-          <i class="fab fa-instagram"></i>
+          <i draggable="false" class="fab fa-instagram"></i>
         </a>
 
         <!-- twitter  -->
@@ -317,11 +339,18 @@
           rel="noopener"
           class="twitter icon-button"
         >
-          <i class="fab fa-twitter"></i>
+          <i draggable="false" class="fab fa-twitter"></i>
         </a>
       </div>
     </div>
   </section>
 </main>
-
+<footer class="footer">
+  <div class="container d-flex align-items-center justify-content-center">
+    <span
+      >Made by
+      <a href="https://github.com/vaylon-fernandes">Vaylon Fernandes</a>.</span
+    >
+  </div>
+</footer>
 {% endblock body %}

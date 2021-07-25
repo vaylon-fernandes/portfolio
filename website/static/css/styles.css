@@ -5,6 +5,9 @@
 html {
   scroll-behavior: smooth;
 }
+.navbar {
+  transition: all 0.3s ease-in-out;
+}
 #mainNav a,
 .navbar-brand {
   font-family: "Trocchi", serif;
@@ -14,7 +17,7 @@ html {
   height: 100%;
 }
 
-#main {
+.wrapper {
   height: 100vh;
 }
 
@@ -25,14 +28,13 @@ html {
 #resume,
 #contact {
   padding-top: 5.625rem;
-  margin: top -5.625rem;
 }
 
 .wave {
-  animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
-  animation-duration: 2.5s; /* Change to speed up or slow down */
-  animation-iteration-count: infinite; /* Never stop waving :) */
-  transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
+  animation-name: wave-animation;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  transform-origin: 70% 70%;
   display: inline-block;
 }
 
@@ -47,7 +49,7 @@ html {
   }
   10% {
     transform: rotate(14deg);
-  } /* The following five values can be played with to make the waving more or less extreme */
+  }
   20% {
     transform: rotate(-8deg);
   }
@@ -62,7 +64,7 @@ html {
   }
   60% {
     transform: rotate(0deg);
-  } /* Reset for the last half to pause */
+  }
   100% {
     transform: rotate(0deg);
   }
@@ -94,8 +96,10 @@ html {
   margin-right: 0.6rem;
 }
 
-#work .card-img-top {
-  height: 16em;
+#telephone {
+  vertical-align: bottom;
+  width: 1.5em;
+  height: 1.5em;
 }
 
 .socials {
@@ -132,7 +136,7 @@ html {
   color: #fff;
   border-radius: 2.6rem;
   cursor: pointer;
-  /* display: inline-block; */
+
   font-size: 1.3rem;
   height: 2.6rem;
   line-height: 2.6rem;
@@ -156,7 +160,51 @@ html {
   background-color: #000;
 }
 
-/* Media queries  */
+#mail-to {
+  font-size: calc(1.3rem + 0.6vw);
+  color: #5d7cf7;
+  transition: 0.2s ease-in;
+}
+
+#mail-to:hover {
+  color: #000;
+}
+
+footer {
+  background-color: #333;
+  padding-top: 2.5em;
+  padding-bottom: 2.5em;
+}
+
+footer span {
+  color: #66806d;
+}
+footer a {
+  color: white;
+}
+
+footer a:hover {
+  color: #66806d;
+}
+
+.scrolled,
+.dark-nav {
+  background-color: #333;
+}
+
+.scrolled .navbar-brand,
+.dark-nav .navbar-brand {
+  color: lightgray;
+}
+.scrolled #mainNav a,
+.dark-nav #mainNav a {
+  color: lightgray;
+}
+#mainNav a:hover,
+.navbar-brand:hover {
+  color: #66806d !important;
+}
+
 @media (min-width: 768px) and (max-width: 991.98px) {
   .source-btn {
     margin-top: 0.5rem;
@@ -166,5 +214,39 @@ html {
 @media (max-width: 767px) {
   #work .col-md {
     margin-top: 0.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  #about-text {
+    font-size: 1rem !important;
+  }
+  #skills .container-fluid {
+    margin-bottom: 0 !important;
+  }
+  .tools {
+    margin-top: 0 !important;
+  }
+  .skill-image {
+    margin-right: 0;
+  }
+  .skills-header,
+  .tools-header {
+    margin-bottom: 0.5rem;
+  }
+  .icon-button i {
+    border-radius: 2rem;
+    font-size: 1rem;
+    height: 2rem;
+    line-height: 2rem;
+    position: relative;
+    text-align: center;
+    width: 2rem;
+  }
+  #mail-to {
+    font-size: 1.1rem;
+  }
+  #contact p {
+    font-size: 1rem !important;
   }
 }

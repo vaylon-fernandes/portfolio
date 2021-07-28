@@ -60,72 +60,81 @@
         <br />
         I'm Vaylon
       </p>
+      <p class="text-muted">Flask Developer in the making!</p>
       <a class="btn btn-outline-dark me-5" href="#about"> About Me </a>
     </section>
   </div>
 
-  <section id="about" class="container-fluid">
-    <div class="container-fluid">
-      <h1 id="about-header" class="text-center">About Me</h1>
-      <div class="container d-flex flex-md-row flex-column">
-        <div
-          class="
-            image-container
-            img-fluid
-            d-md-flex d-none
-            justify-content-center
-          "
-        >
-          <img src={{url_for("static",
-          filename="/images/vaylon-fernandes.png")}} class="rounded-circle
-          shadow w-100 h-100" alt="Vaylon Fernandes" draggable="false" />
-        </div>
-
-        <div
-          class="
-            image-container
-            w-100
-            h-75
-            d-md-none d-flex
-            justify-content-center
-            align-items-center
-          "
-        >
-          <img src={{url_for("static",
-          filename="/images/vaylon-fernandes.png")}} class="rounded-circle w-50
-          h-100" alt="Vaylon Fernandes" />
-        </div>
-
-        <div
-          class="
-            d-flex
-            align-items-center
-            justify-content-center
-            ps-4
-            flex-column
-          "
-        >
-          <p id="about-text" class="text-center fs-4">
-            I am a Electonics and Telecomunication engineering graduate pursuing
-            my passion and for programming 👨‍💻. Right now I am exploring the
-            world of web development 💻. Currently I am working on
-            <a
-              href="https://flask.palletsprojects.com/en/2.0.x/"
-              class="fw-bold"
-              target="_blank"
-              >Flask
-            </a>
-            based projects.
-          </p>
-
-          <a href="#" target="_blank" class="btn btn-sm btn-outline-dark"
-            >My Resume</a
+  <!-- About  -->
+  <div class="wrapper">
+    <section id="about" class="container-fluid">
+      <div class="container-fluid">
+        <h1 id="about-header" class="text-center">About Me</h1>
+        <div class="container d-flex flex-md-row flex-column">
+          <div
+            class="
+              image-container
+              img-fluid
+              d-md-flex d-none
+              justify-content-center
+            "
           >
+            <img src={{url_for("static",
+            filename="/images/vaylon-fernandes.png")}} class="rounded-circle
+            shadow w-100 h-100" alt="Vaylon Fernandes" draggable="false" />
+          </div>
+
+          <div
+            class="
+              image-container
+              w-100
+              h-75
+              d-md-none d-flex
+              justify-content-center
+              align-items-center
+            "
+          >
+            <img src={{url_for("static",
+            filename="/images/vaylon-fernandes.png")}} class="rounded-circle
+            w-50 h-100" alt="Vaylon Fernandes" />
+          </div>
+
+          <div
+            class="
+              d-flex
+              align-items-center
+              justify-content-center
+              ps-4
+              flex-column
+            "
+          >
+            <p id="about-text" class="text-center fs-4">
+              I am a Electonics and Telecomunication engineering graduate
+              pursuing my passion and for programming 👨‍💻. Right now I am
+              exploring the world of web development 💻. Currently I am working
+              on
+              <a
+                href="https://flask.palletsprojects.com/en/2.0.x/"
+                class="fw-bold"
+                target="_blank"
+                >Flask
+              </a>
+              based projects.
+            </p>
+
+            <a
+              href="/download"
+              target="_blank"
+              class="btn btn-sm btn-outline-dark"
+              >My Resume</a
+            >
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </div>
 
+  <!-- Skills section   -->
   <section id="skills">
     <div class="container-fluid text-center mb-5">
       <h1 class="skills-header">Skills</h1>
@@ -156,6 +165,9 @@
       filename="images/vscode-Icon.svg")}} draggable="false" alt="vscode Logo">
     </div>
   </section>
+
+  <!-- work  -->
+
   <section id="work">
     <div class="container-fluid text-center">
       <h1>My Work</h1>
@@ -163,7 +175,7 @@
     </div>
     <div class="row">
       <div class="col-md">
-        <div class="card shadow h-100">
+        <div class="card shadow">
           <img src={{url_for("static", filename="images/weather_app.png")}}
           class="card-img-top" alt="Flask weather app" draggable="false" />
           <div class="card-body">
@@ -187,7 +199,7 @@
         </div>
       </div>
       <div class="col-md">
-        <div class="card shadow h-100">
+        <div class="card shadow">
           <img src={{url_for("static", filename="images/to_do_app.png")}}
           class="card-img-top" alt="Flask To do list app" draggable="false" />
           <div class="card-body">
@@ -211,7 +223,7 @@
         </div>
       </div>
       <div class="col-md">
-        <div class="card shadow h-100">
+        <div class="card shadow">
           <img src={{ url_for("static", filename="images/rand_wiki.png") }}
           class="card-img-top" id="wiki-app" alt="Random wiki app"
           draggable="false" />
@@ -251,6 +263,9 @@
       >Visit my Github profile to see more
     </a>
   </section>
+
+  <!-- blog  -->
+
   <section id="blog">
     <div class="container-fluid text-center">
       <h1>Blog</h1>
@@ -260,6 +275,8 @@
       </p>
     </div>
   </section>
+
+  <!-- contact  -->
 
   <section id="contact">
     <div class="container-fluid text-center">
@@ -276,6 +293,7 @@
         Looking to hire? Want to discuss a project or just chat? My inbox is
         open for all.
       </p>
+
       <a
         href="mailto:vaylonfernandes@protonmail.com"
         class="text-decoration-none"

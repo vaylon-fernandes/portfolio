@@ -13,21 +13,27 @@ html {
   font-family: "Trocchi", serif;
 }
 
-#home {
-  height: 100%;
-}
-
 .wrapper {
   height: 100vh;
 }
 
+#home,
+#about {
+  height: 100%;
+}
+
+#home,
 #about,
 #skills,
 #work,
 #blog,
-#resume,
 #contact {
+  /* padding-top: 2.3rem; */
   padding-top: 5.625rem;
+}
+
+#home > p.text-muted {
+  font-size: 1.5em;
 }
 
 .wave {
@@ -218,8 +224,27 @@ footer a:hover {
 }
 
 @media (max-width: 576px) {
+  #about,
+  #skills,
+  #work,
+  #blog,
+  #contact {
+    padding-top: 0;
+    margin-top: 0;
+  }
+  #about:target,
+  #skills:target,
+  #work:target,
+  #blog:target,
+  #contact:target {
+    padding-top: 0;
+    margin-top: -0;
+  }
   #about-text {
     font-size: 1rem !important;
+  }
+  #home > p.text-muted {
+    font-size: 1em;
   }
   #skills .container-fluid {
     margin-bottom: 0 !important;
@@ -233,6 +258,9 @@ footer a:hover {
   .skills-header,
   .tools-header {
     margin-bottom: 0.5rem;
+  }
+  #blog {
+    margin-top: 1em;
   }
   .icon-button i {
     border-radius: 2rem;

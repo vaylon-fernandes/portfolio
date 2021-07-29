@@ -15,6 +15,7 @@ html {
 
 .wrapper {
   height: 100vh;
+  position: relative !important;
 }
 
 #home,
@@ -26,9 +27,9 @@ html {
 #about,
 #skills,
 #work,
+#achievements,
 #blog,
 #contact {
-  /* padding-top: 2.3rem; */
   padding-top: 5.625rem;
 }
 
@@ -98,8 +99,17 @@ html {
   font-size: 1.469em;
 }
 
+.card-text a:hover {
+  color: #333;
+  text-decoration: none;
+}
+
 #work .fa-github {
   margin-right: 0.6rem;
+}
+
+#work > a:hover {
+  color: #333;
 }
 
 #telephone {
@@ -125,7 +135,7 @@ html {
 }
 
 .github i {
-  background-color: #333;
+  background-color: #111;
 }
 
 .stack-overflow i {
@@ -163,7 +173,7 @@ html {
 .mail i:hover,
 .stack-overflow i:hover,
 .twitter i:hover {
-  background-color: #000;
+  background-color: #333;
 }
 
 #mail-to {
@@ -173,7 +183,7 @@ html {
 }
 
 #mail-to:hover {
-  color: #000;
+  color: #333;
 }
 
 footer {
@@ -224,28 +234,22 @@ footer a:hover {
 }
 
 @media (max-width: 576px) {
-  #about,
+  /* #about,
   #skills,
   #work,
   #blog,
   #contact {
     padding-top: 0;
     margin-top: 0;
-  }
-  #about:target,
-  #skills:target,
-  #work:target,
-  #blog:target,
-  #contact:target {
-    padding-top: 0;
-    margin-top: -0;
-  }
+  } */
+
   #about-text {
     font-size: 1rem !important;
   }
   #home > p.text-muted {
     font-size: 1em;
   }
+
   #skills .container-fluid {
     margin-bottom: 0 !important;
   }

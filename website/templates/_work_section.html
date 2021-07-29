@@ -1,0 +1,101 @@
+{% block main %}
+
+<section id="work">
+  <div class="container-fluid text-center">
+    <h1>My Work</h1>
+    <p id="work-text">Here's some of my work</p>
+  </div>
+  <div class="row">
+    <div class="col-md">
+      <div class="card shadow">
+        <img src={{url_for("static", filename="images/weather_app.png")}}
+        class="card-img-top" alt="Flask weather app" draggable="false" />
+        <div class="card-body">
+          <h5 class="card-title">Flask Weather App</h5>
+          <p class="card-text">
+            A simple weather app built using Flask and Bootstrap. Used
+            <a href="https://openweathermap.org/api">Open Weather Map</a> API
+            for weather data.
+          </p>
+          <a
+            href="https://weatherappfh.herokuapp.com/"
+            class="btn btn-sm btn-outline-dark rounded-pill"
+            target="_blank"
+            ><i class="fas fa-globe"></i> View Site</a
+          >
+          <a
+            href="https://github.com/vaylon-fernandes/flask_weather_app"
+            class="btn btn-sm btn-outline-dark rounded-pill source-btn"
+            target="_blank"
+            ><i class="fab fa-github"></i>View Source</a
+          >
+        </div>
+      </div>
+    </div>
+    <div class="col-md">
+      <div class="card shadow">
+        <img src={{url_for("static", filename="images/to_do_app.png")}}
+        class="card-img-top" alt="Flask To do list app" draggable="false" />
+        <div class="card-body">
+          <h5 class class="card-title">Flask To Do List App</h5>
+          <p class="card-text">
+            A To Do List app built using Flask, Flask SQLAlchemy and Bootstrap.
+          </p>
+          <a
+            href="https://flask-web-todo.herokuapp.com/"
+            class="btn btn-sm btn-outline-dark rounded-pill"
+            target="_blank"
+            ><i class="fas fa-globe"></i> View Site</a
+          >
+          <a
+            href="https://github.com/vaylon-fernandes/flask_to_do_list"
+            class="btn btn-sm btn-outline-dark rounded-pill source-btn"
+            target="_blank"
+            ><i class="fab fa-github"></i>View Source</a
+          >
+        </div>
+      </div>
+    </div>
+    <div class="col-md">
+      <div class="card shadow">
+        <img src={{ url_for("static", filename="images/rand_wiki.png") }}
+        class="card-img-top" id="wiki-app" alt="Random wiki app"
+        draggable="false" />
+        <div class="card-body">
+          <h5 class="card-title">Flask Random Wiki App</h5>
+          <p class="card-text">
+            A simple Flask app that displays the title and intro of a random
+            wikipedia article with a link to the full article.
+          </p>
+          <a
+            href="https://rand-wiki.herokuapp.com/"
+            class="btn btn-sm btn-outline-dark rounded-pill"
+            target="_blank"
+            ><i class="fas fa-globe"></i> View Site</a
+          >
+          <a
+            href="https://github.com/vaylon-fernandes/random_wiki/"
+            class="btn btn-sm btn-outline-dark rounded-pill source-btn"
+            target="_blank"
+            ><i class="fab fa-github"></i>View Source</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+  <a
+    href="https://github.com/vaylon-fernandes"
+    class="
+      text-decoration-none
+      d-flex
+      justify-content-center
+      mt-3
+      fab
+      fa-github
+      fs-5
+    "
+    aria-hidden="false"
+    >Visit my Github profile to see more
+  </a>
+</section>
+{% endblock main %}

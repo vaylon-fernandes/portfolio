@@ -1,5 +1,4 @@
-from os import environ
-from flask import render_template, redirect, request, flash
+from flask import render_template
 from flask.blueprints import Blueprint
 from flask.helpers import send_file
 
@@ -11,7 +10,7 @@ def home():
     return render_template("index.html")
 
 
-@views.route('/download')
-def download():
+@views.route('/resume')
+def get_resume():
     path = "files/Resume-Vaylon-Fernandes.pdf"
     return send_file(path, as_attachment=True)

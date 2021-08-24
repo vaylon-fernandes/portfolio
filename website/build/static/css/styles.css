@@ -234,15 +234,6 @@ footer a:hover {
 }
 
 @media (max-width: 576px) {
-  /* #about,
-  #skills,
-  #work,
-  #blog,
-  #contact {
-    padding-top: 0;
-    margin-top: 0;
-  } */
-
   #about-text {
     font-size: 1rem !important;
   }

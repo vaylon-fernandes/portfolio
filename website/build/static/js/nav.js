@@ -1,6 +1,4 @@
 const nav = document.getElementById("navWrapper");
-const smallScreen = window.innerWidth < 575;
-const screenMd = window.innerWidth < 992;
 
 window.addEventListener("scroll", fixNav);
 
@@ -18,19 +16,18 @@ function fixNav() {
   }
 }
 
-if (smallScreen) {
+const screenMd = window.innerWidth < 992;
+const navLinks = document.querySelectorAll(".nav-item");
+const menuToggle = document.getElementById("mainNav");
+
+if (screenMd) {
   window.removeEventListener("scroll", fixNav);
   nav.classList.remove("navbar-light");
   nav.classList.add("navbar-dark");
   nav.classList.add("dark-nav");
-}
-const navLinks = document.querySelectorAll(".nav-item");
-const menuToggle = document.getElementById("mainNav");
-const bsCollapse = new bootstrap.Collapse(menuToggle);
-
-if (screenMd) {
   navLinks.forEach((l) => {
     l.addEventListener("click", () => {
+      const bsCollapse = new bootstrap.Collapse(menuToggle);
       bsCollapse.toggle();
     });
   });

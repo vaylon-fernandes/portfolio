@@ -10,7 +10,7 @@ def home():
     return render_template("index.html")
 
 
-@views.route('/resume')
+@views.route('/vaylon_fernandes_resume.pdf')
 def get_resume():
     path = "files/Resume-Vaylon-Fernandes.pdf"
-    return send_file(path, as_attachment=True)
+    return send_file(path, as_attachment=True), {"Content-Type": "application/pdf"}

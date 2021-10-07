@@ -36,6 +36,17 @@ async = ["asgiref (>=3.2)"]
 dotenv = ["python-dotenv"]
 
 [[package]]
+name = "frozen-flask"
+version = "0.18"
+description = "Freezes a Flask application into a set of static files."
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+Flask = ">=1.1.0"
+
+[[package]]
 name = "gunicorn"
 version = "20.1.0"
 description = "WSGI HTTP Server for UNIX"
@@ -104,7 +115,7 @@ watchdog = ["watchdog"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "cd0f1b9ff0b2fcf684d6f31dfdfec57446cf954c02d679c8ad9c10051cebaad1"
+content-hash = "479ca74433d6fcbb9baad2dffe6fd3ac481bdf6c4b3e527e19ea3115ded46360"
 
 [metadata.files]
 click = [
@@ -118,6 +129,10 @@ colorama = [
 flask = [
     {file = "Flask-2.0.1-py3-none-any.whl", hash = "sha256:a6209ca15eb63fc9385f38e452704113d679511d9574d09b2cf9183ae7d20dc9"},
     {file = "Flask-2.0.1.tar.gz", hash = "sha256:1c4c257b1892aec1398784c63791cbaa43062f1f7aeb555c4da961b20ee68f55"},
+]
+frozen-flask = [
+    {file = "Frozen-Flask-0.18.tar.gz", hash = "sha256:4113638baebb348e16b10b12cbd88bddc7309f24d94332a18ae6a56c8ac02d3d"},
+    {file = "Frozen_Flask-0.18-py3-none-any.whl", hash = "sha256:6d892fd929f6676c3270b7d91d86a1fc03c9850dc21e3b02b3946381c48ab307"},
 ]
 gunicorn = [
     {file = "gunicorn-20.1.0-py3-none-any.whl", hash = "sha256:9dcc4547dbb1cb284accfb15ab5667a0e5d1881cc443e0677b4882a4067a807e"},

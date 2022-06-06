@@ -13,15 +13,6 @@ html {
   font-family: "Trocchi", serif;
 }
 
-.wrapper {
-  height: 100vh;
-  position: relative !important;
-}
-
-#home,
-#about {
-  height: 100%;
-}
 
 #home,
 #about,

@@ -5,6 +5,7 @@
 html {
   scroll-behavior: smooth;
 }
+
 .navbar {
   transition: all 0.3s ease-in-out;
 }
@@ -12,7 +13,6 @@ html {
 .navbar-brand {
   font-family: "Trocchi", serif;
 }
-
 
 #home,
 #about,
@@ -24,9 +24,11 @@ html {
   padding-top: 5.625rem;
 }
 
+
 #home > p.text-muted {
   font-size: 1.5em;
 }
+
 
 .wave {
   animation-name: wave-animation;
@@ -87,13 +89,9 @@ html {
 }
 
 #work-text {
-  font-size: 1.469em;
+  font-size: 1.469em !important;
 }
 
-.card-text a:hover {
-  color: #333;
-  text-decoration: none;
-}
 
 #work .fa-github {
   margin-right: 0.6rem;
@@ -216,15 +214,46 @@ footer a:hover {
   .source-btn {
     margin-top: 0.5rem;
   }
-}
-
-@media (max-width: 767px) {
-  #work .col-md {
-    margin-top: 0.5rem;
+  .site-btn, .source-btn{
+    font-size: 0.7em;
+    display: inline;
   }
 }
 
+@media (max-width: 767.20px) {
+  #work .col-md {
+    margin-top: 0.5rem;
+  }
+  #work > div > div > a{
+    display: none;
+  }
+  .text > p{
+    font-size: 0.9em;
+  }
+  .work-container .text > h{
+    order: 1;
+  }
+  .work-container .image{
+    order:2;
+  }
+  .work-container .text > p{
+order: 2;
+  }
+  .work-container .work-buttons{
+    order:4;
+  }
+}
+/* #work > div.container.d-flex.flex-md-row-reverse.flex-column.my-2.work-container > div.text > a:nth-child(4) */
+
 @media (max-width: 576px) {
+  #home > div.d-flex.flex-column.align-items-center > p.text-muted.me-5.fs-4{
+    font-size: 1rem !important;
+  }
+  #home > div.d-flex.justify-content-center.align-items-center.p-3{
+    height: 50% !important;
+    width: 35% !important;
+  }
+  
   #about-text {
     font-size: 1rem !important;
   }

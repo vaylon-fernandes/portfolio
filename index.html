@@ -102,9 +102,8 @@
       </div>
     </nav>
 
-    <main class="container-fluid" id="main">
+    <main class="container" id="main">
       <!-- home  -->
-
       <div class="wrapper">
         <section
           class="d-flex justify-content-center align-items-center flex-column flex-md-row"
@@ -131,9 +130,7 @@
               <br />
               I'm Vaylon
             </p>
-            <p class="text-muted me-5 fs-4">
-              Software Developer in the making!
-            </p>
+            <p class="text-muted fs-4">Software Developer in the making!</p>
             <a class="btn btn-outline-dark me-5" href="#about"> About Me </a>
           </div>
         </section>
@@ -209,7 +206,12 @@
           class="container d-flex flex-md-row flex-column my-2 work-container"
         >
           <div class="image">
-            <img src="static/images/to_do_app.png" alt="TODO App" srcset="" />
+            <img
+              src="static/images/to_do_app.png"
+              class="img-fluid"
+              alt="TODO App"
+              srcset=""
+            />
           </div>
           <div class="text">
             <h2>Flask To-Do List</h2>
@@ -217,7 +219,7 @@
               A To Do List app built using Flask, Flask SQLAlchemy, Flask Login
               and Bootstrap.
             </p>
-            <ul>
+            <ul class="explanation-points">
               <li>
                 The app lets users create an account and add, update and delete
                 tasks.
@@ -261,10 +263,11 @@
         <div
           class="container d-flex flex-md-row-reverse flex-column my-2 work-container"
         >
-          <div class="image">
+          <div class="image container">
             <img
               src="static/images/weather_app.png"
               alt="Weather App"
+              class="img-fluid"
               srcset=""
             />
           </div>
@@ -273,7 +276,7 @@
             <p class="d-flex flex-column">
               A simple weather app built using Flask and Bootstrap.
             </p>
-            <ul>
+            <ul class="explanation-points">
               <li>
                 The app lets you enter the name of any city around the world and
                 get the weather info of that city.
@@ -316,9 +319,10 @@
         <div
           class="container d-flex flex-md-row flex-column my-2 work-container"
         >
-          <div class="image mx-2" id="weather-image">
+          <div class="image mx-2 container" id="weather-image">
             <img
               src="static/images/rand_wiki.png"
+              class="img-fluid"
               alt="Weather App"
               srcset=""
             />
@@ -330,7 +334,7 @@
               wikipedia article when you click the buuton and gives you a link
               to the article just in case you want to read it the whole thing.
             </p>
-            <ul>
+            <ul class="explanation-points">
               <li>
                 I used the Beautiful Soup library to scrape the Title and
                 Introduction of the wikipedia article.
@@ -460,17 +464,6 @@
       </section>
 
       <!-- blog  -->
-
-      <section id="blog">
-        <div class="container text-center">
-          <h1>Blog</h1>
-          <p class="fs-2">
-            Coming Soon😁! <br />
-            Stay Tuned!
-          </p>
-        </div>
-      </section>
-
       <!-- contact  -->
 
       <section id="contact">

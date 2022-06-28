@@ -246,7 +246,15 @@ order: 2;
 /* #work > div.container.d-flex.flex-md-row-reverse.flex-column.my-2.work-container > div.text > a:nth-child(4) */
 
 @media (max-width: 576px) {
-  #home > div.d-flex.flex-column.align-items-center > p.text-muted.me-5.fs-4{
+#about,
+#skills,
+#work,
+#achievements,
+#blog,
+#contact {
+  padding-top: 3rem;
+}
+  .text-muted{
     font-size: 1rem !important;
   }
   #home > div.d-flex.justify-content-center.align-items-center.p-3{
@@ -256,9 +264,6 @@ order: 2;
   
   #about-text {
     font-size: 1rem !important;
-  }
-  #home > p.text-muted {
-    font-size: 1em;
   }
 
   #skills .container-fluid {
@@ -274,6 +279,13 @@ order: 2;
   .tools-header {
     margin-bottom: 0.5rem;
   }
+.work-container{
+  margin-top:1.5rem!important;
+}
+  .explanation-points{
+    font-size: 0.9rem;
+  }
+
   #blog {
     margin-top: 1em;
   }
